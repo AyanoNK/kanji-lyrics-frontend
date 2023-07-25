@@ -9,8 +9,6 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        nagayama_kai: ['var(--nagayama_kai)'],
-        sans: ['var(--font-nagayama_kai)'],
         mono: ['var(--font-inter)'],
       },
       backgroundImage: {
