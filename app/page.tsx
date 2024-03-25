@@ -29,9 +29,9 @@ export default function Home() {
           <span className="text-xl text-center">夢で ____ 飛んだ</span>
         </div>
 
-        <div className="col-span-5 md:col-span-2 grid xl:grid-cols-2 gap-4">
-          {options.map((option: string) => (
-            <HeroOption value={option} />
+        <div className="col-span-5 md:col-span-2 flex flex-col gap-4">
+          {options.map((option: string, index: number) => (
+            <HeroOption key={`option-${index}`} value={option} />
           ))}
         </div>
       </div>
