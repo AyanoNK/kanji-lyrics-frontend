@@ -7,14 +7,13 @@ export default function Header() {
         <Image
           className="hidden sm:block"
           src="/ai-logo.webp"
-          alt="Next.js Logo"
+          alt="Logo"
           width={50}
           height={50}
           priority
         />
         <form className="relative w-full">
           <input
-            type="text"
             className="w-full overflow-hidden whitespace-nowrap"
             placeholder="検索を入力"
           />
@@ -28,7 +27,7 @@ export default function Header() {
           <Image
             className="sm:hidden"
             src="/ai-logo.webp"
-            alt="Next.js Logo"
+            alt="Logomini"
             width={30}
             height={30}
             priority
