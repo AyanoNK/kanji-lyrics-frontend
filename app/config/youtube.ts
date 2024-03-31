@@ -12,7 +12,7 @@ const youTubeConfig = ({ start, end }: YouTubeConfigProps) => {
         start,
         end,
         controls: 0,
-        loop: 1,
+        loop: 0,
       },
     },
   } as YouTubeConfig;
