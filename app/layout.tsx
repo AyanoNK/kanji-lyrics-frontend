@@ -20,7 +20,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} flex justify-center min-h-screen`}>
-        ``
         <main className="flex flex-col w-full md:max-w-2xl xl:max-w-4xl gap-16">
           <Header />
           <HydrationOverlay>{children}</HydrationOverlay>
