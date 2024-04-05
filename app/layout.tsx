@@ -1,9 +1,8 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import './globals.css';
-import Header from './Header';
 import Footer from './Footer';
-import { HydrationOverlay } from '@builder.io/react-hydration-overlay';
+import Header from './Header';
+import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -22,7 +21,7 @@ export default function RootLayout({
       <body className={`${inter.className} flex justify-center min-h-screen`}>
         <main className="flex flex-col w-full md:max-w-2xl xl:max-w-4xl gap-16">
           <Header />
-          <HydrationOverlay>{children}</HydrationOverlay>
+          {children}
           <Footer />
         </main>
       </body>
