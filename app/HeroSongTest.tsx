@@ -19,7 +19,7 @@ const DynamicYouTubePlayerWrapper = dynamic(
 
 export default function HeroSongTest({ song }: HeroSongTestProps) {
   const player = useRef<YouTubePlayer>(null);
-
+  const firstBreakpoint = song.breakpoints[0];
   return (
     <div className="grid grid-cols-5 gap-4 w-full">
       <div className="col-span-5 text-left w-full">
@@ -33,14 +33,14 @@ export default function HeroSongTest({ song }: HeroSongTestProps) {
           <DynamicYouTubePlayerWrapper
             player={player}
             youtubeID={song.youTubeID}
-            start={song.start}
-            end={song.end}
+            start={firstBreakpoint.start}
+            end={firstBreakpoint.end}
           />
         </div>
         <span className="text-xl text-center">夢で ____ 飛んだ</span>
       </div>
       <div className="col-span-5 md:col-span-2 flex flex-col gap-4">
-        {song.options.map((option: string, index: number) => (
+        {firstBreakpoint.options.map((option: string, index: number) => (
           <HeroOption key={`option-${index}`} value={option} />
         ))}
       </div>

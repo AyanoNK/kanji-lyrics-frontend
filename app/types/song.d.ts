@@ -1,7 +1,11 @@
 type Song = {
   youTubeID: string;
-  options: string[];
-  answer: string;
+  breakpoints: SongBreakpoint[];
+};
+
+type SongBreakpoint = {
   start: number;
   end: number;
+  options: string[];
+  answer: string;
 };
