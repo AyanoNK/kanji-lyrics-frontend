@@ -2,6 +2,10 @@
 // https://deno.land/manual/getting_started/setup_your_environment
 // This enables autocomplete, go to definition, etc.
 
+export const config = {
+  runtime: 'vercel-deno', // 'nodejs' is the default
+};
+
 console.log("Hello from Functions!")
 
 Deno.serve(async (req) => {
