@@ -1,9 +1,8 @@
 'use client';
 
-import { Dispatch, SetStateAction, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import YouTubePlayer from 'react-player/youtube';
 import youTubeConfig from './config/youtube';
-import { OnProgressProps } from 'react-player/base';
 
 interface HeroSongTestProps {
   player: React.RefObject<YouTubePlayer>;
@@ -54,9 +53,8 @@ export default function YouTubePlayerWrapper({
   return (
     <>
       {hasWindow && (
-        <div className="h-full w-full flex relative">
+        <div className="h-full w-full flex relative rounded overflow-hidden">
           <YouTubePlayer
-            className=""
             ref={player}
             onPlay={handleOnPlay}
             onPause={handleOnPause}
